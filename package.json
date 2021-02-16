@@ -1,0 +1,9 @@
+{
+	"name": "web-socket",
+	"version": "0.0.1",
+	"description": "Websocket implementation for incognito chat server",
+	"dependencies": {
+		"express": "^4.17.1",
+		"socket.io": "^3.1.0"
+	}
+}
