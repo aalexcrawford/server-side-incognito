@@ -17,6 +17,7 @@ io.on('connection', (socket) => {
 	socket.on('chat message', msg => {
         console.log("Chat message received");
 		io.emit('chat message', msg);
+        console.log(msg.Message);
         });
     socket.on('PM', msg => {
         console.log("Private message received");
