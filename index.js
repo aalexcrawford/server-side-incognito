@@ -15,9 +15,14 @@ io.on('connection', (socket) => {
 	console.log("Connection established");
     console.log(" %s sockets connected", io.engine.clientsCount);
 	socket.on('chat message', msg => {
+    //Each socket.on is the channel being handled
+        //msg is the JSON information 
         console.log("Chat message received");
 		io.emit('chat message', msg);
+        //'chat message' is the even being handled
+        // Server emit sends to everyone connected to socket
         console.log(msg.message);
+        //msg.message is the message being sent in the JSON
         });
     socket.on('PM', msg => {
         console.log("Private message received");
