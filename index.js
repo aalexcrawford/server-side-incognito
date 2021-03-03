@@ -28,6 +28,10 @@ io.on('connection', (socket) => {
         console.log("Private message received");
         io.emit('PM', msg);
         });
+    socket.on('P2P Message', msg => {
+        console.log("This is a P2P Message");
+        
+    });
 });
 
 http.listen(port, () => {
