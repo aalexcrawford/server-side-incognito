@@ -30,6 +30,7 @@ io.on('connection', (socket) => {
         });
     socket.on('P2P Message', msg => {
         console.log("This is a P2P Message");
+        console.log(msg.socketID);
         io.to(msg.socketID).emit('P2P Message', msg);
     });
 });
